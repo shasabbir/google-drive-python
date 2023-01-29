@@ -4,7 +4,7 @@ from googleapiclient.http import MediaFileUpload
 import io
 from googleapiclient.http import MediaIoBaseDownload
 import json
-SERVICE_ACCOUNT = 'glpyy-376212-6ef6f03254b0.json' # Please set the file of your credentials of service account.
+SERVICE_ACCOUNT = 'cred.json' # Please set the file of your credentials of service account.
 UPLOAD_FILE = 'b.txt' # Please set the filename with the path you want to upload.
 FOLDER_ID = '1BQY5YyGjRvG-FMP3PrEILu8NfD-JWXud' # Please set the folder ID that you shared your folder with the service account.
 FILENAME = 'b.txt' # You can set the filename of the uploaded file on Google Drive.
@@ -40,5 +40,5 @@ def download_file(name,file_id):
         f = open(name, "r")
         return (json.loads(f.read()))
 #print(download_file('nn.txt','1K0g6A4VvqlKahRmm00MDiKk-fDVDK3U6')['text'])
-create_file("gg.txt",FOLDER_ID,"gg.txt")
+create_file("gg2.txt",FOLDER_ID,"gg.txt")
 #print(delete_file("1K0g6A4VvqlKahRmm00MDiKk-fDVDK3U6"))
