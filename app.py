@@ -39,6 +39,13 @@ def download_file(name,file_id):
         print ("Download  done")
         f = open(name, "r")
         return (json.loads(f.read()))
+
+
+def update_file(file,file_id):
+    media_content = MediaFileUpload(file, mimetype='text/plain')
+    print(drive.files().update(fileId=file_id,media_body=media_content).execute())
 #print(download_file('nn.txt','1K0g6A4VvqlKahRmm00MDiKk-fDVDK3U6')['text'])
-create_file("gg2.txt",FOLDER_ID,"gg.txt")
+#create_file("gg2.txt",FOLDER_ID,"gg.txt")
 #print(delete_file("1K0g6A4VvqlKahRmm00MDiKk-fDVDK3U6"))
+file_id = '13Cv0b6Veo9PSRr-kis9-V8Ml-DuiBZGY'
+#update_file("vv.txt",file_id)
